@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TO DO LIST</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/de94b6f5a5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header class="header-main">
+		<div class="content-logo">
+			<div class="logo"><b>Logo</b></div>
+			<div class="search-assignment">
+				<i class="fas fa-search"></i>
+				<input id="search" type="text" placeholder="Search..." autocomplete="off">
+			</div>
+		</div>
+
+		<div class="content-profile">
+			<div class="photo"><img src="https://avatars.githubusercontent.com/u/66875498?v=4" alt="foto do usuário"></div>
+			<div class="container-name-profession">
+				<p class="name">João Pedro</p>
+				<span class="profession"><small>Font-End Developer</small></span>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="container-assignment">
+			<div class="container-table">
+				<div class="header-actions">
+					<div>
+						<b>Membros</b>
+						<button id="add-tarefa" class="btn-action">
+							<span>Nova Tarefa</span>
+							<i class="fas fa-plus"></i>
+						</button>
+						<button class="btn">Export Membros (Excel)</button>
+					</div>
+					<button class="btn-action">
+						<i class="fas fa-angle-left"></i>
+						<span>Filtro</span>
+					</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Foto</th>
+							<th>Nome</th>
+							<th>E-mail</th>
+							<th>Tarefa</th>
+							<th>Status</th>
+							<th>Operações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="photo"><img src="https://avatars.githubusercontent.com/u/59871008?v=4" alt="foto do membro">
+							</td>
+							<td>Karol Roberta</td>
+							<td>Karol@roberta.com.br</td>
+							<td>Testar todos os inputs</td>
+							<td class="status"><span class="chip">Ativo</span></td>
+							<td class="action">
+								<button class="fas fa-tasks finish-todo"></button>
+								<button class="fas fa-edit edit-todo"></button>
+								<button class="fas fa-times remove-todo"></button>
+							</td>
+						</tr>
+						<tr>
+							<td class="photo"><img src="https://avatars.githubusercontent.com/u/59871008?v=4" alt="foto do membro">
+							</td>
+							<td>Karol Roberta</td>
+							<td>Karol@roberta.com.br</td>
+							<td>Testar todos os inputs</td>
+							<td class="status"><span class="chip">Ativo</span></td>
+							<td class="action">
+								<button class="fas fa-tasks finish-todo"></button>
+								<button class="fas fa-edit edit-todo"></button>
+								<button class="fas fa-times remove-todo"></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+
+	<div id="modal-perfil" class="modal-container">
+		<div class="modal">
+			<button class="fas fa-times" id="closed"></button>
+			<h3 class="title">Adicione nova tarefa</h3>
+			<form id="form">
+				<label for="foto">
+					<input type="text" id="link" placeholder="Link da foto do membro" required>
+				</label>
+
+				<label for="nome">
+					<input type="text" id="nome" placeholder="Nome" required>
+				</label>
+
+				<label for="tarefa">
+					<input type="text" id="tarefa" placeholder="Tarefa" required>
+				</label>
+
+				<label for="email">
+					<input type="email" id="email" placeholder="E-mail" required>
+				</label>
+				<button type="submit" class="btn-modal">Adicionar</button>
+			</form>
+		</div>
+	</div>
+		<script src="js/script.js" defer></script>
+</body>
+
+</html>
